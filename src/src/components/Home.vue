@@ -34,10 +34,9 @@
 
 <script>
   export default {
-    data () {
-      return {
-        meetups: [ {imageUrl: 'https://static.pexels.com/photos/374710/pexels-photo-374710.jpeg', id: 1, title: 'Meetup in New York'},
-                   {imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Paris_vue_d%27ensemble_tour_Eiffel.jpg', id: 2, title: 'Meetup in Paris'} ]
+    computed: {
+      meetups () {
+        return this.$store.getters.featuredMeetups
       }
     },
     methods: {
